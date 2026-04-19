@@ -1,0 +1,16 @@
+name: audit_pipeline
+version: "1.0.0"
+profile: audit_pipeline
+
+model-paths: ["models"]
+test-paths: ["tests"]
+snapshot-paths: ["snapshots"]
+
+models:
+  audit_pipeline:
+    silver:
+      materialized: table
+      tags: ["silver"]
+    gold:
+      materialized: table
+      tags: ["gold"]
